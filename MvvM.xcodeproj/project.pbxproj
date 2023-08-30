@@ -16,6 +16,10 @@
 		910781CC2A9FBF1D00401104 /* MvvMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910781CB2A9FBF1D00401104 /* MvvMTests.swift */; };
 		910781D62A9FBF1D00401104 /* MvvMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910781D52A9FBF1D00401104 /* MvvMUITests.swift */; };
 		910781D82A9FBF1D00401104 /* MvvMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910781D72A9FBF1D00401104 /* MvvMUITestsLaunchTests.swift */; };
+		910781E92A9FC04300401104 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910781E82A9FC04300401104 /* ViewModel.swift */; };
+		910781EB2A9FC05800401104 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910781EA2A9FC05800401104 /* Item.swift */; };
+		910781ED2A9FC06200401104 /* MyResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910781EC2A9FC06200401104 /* MyResult.swift */; };
+		910781F02A9FC0C400401104 /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910781EF2A9FC0C400401104 /* NetworkServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		910781D12A9FBF1D00401104 /* MvvMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MvvMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		910781D52A9FBF1D00401104 /* MvvMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvMUITests.swift; sourceTree = "<group>"; };
 		910781D72A9FBF1D00401104 /* MvvMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MvvMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		910781E82A9FC04300401104 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		910781EA2A9FC05800401104 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		910781EC2A9FC06200401104 /* MyResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyResult.swift; sourceTree = "<group>"; };
+		910781EF2A9FC0C400401104 /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +107,14 @@
 		910781B32A9FBF1A00401104 /* MvvM */ = {
 			isa = PBXGroup;
 			children = (
+				910781EE2A9FC0B200401104 /* Services */,
+				910781E72A9FC01800401104 /* ViewModel */,
+				910781E62A9FBFF200401104 /* Model */,
+				910781E52A9FBFE200401104 /* View */,
+				910781E42A9FBFC300401104 /* Controllers */,
 				910781B42A9FBF1A00401104 /* AppDelegate.swift */,
 				910781B62A9FBF1A00401104 /* SceneDelegate.swift */,
-				910781B82A9FBF1A00401104 /* ViewController.swift */,
-				910781BA2A9FBF1A00401104 /* Main.storyboard */,
 				910781BD2A9FBF1D00401104 /* Assets.xcassets */,
-				910781BF2A9FBF1D00401104 /* LaunchScreen.storyboard */,
 				910781C22A9FBF1D00401104 /* Info.plist */,
 			);
 			path = MvvM;
@@ -125,6 +135,48 @@
 				910781D72A9FBF1D00401104 /* MvvMUITestsLaunchTests.swift */,
 			);
 			path = MvvMUITests;
+			sourceTree = "<group>";
+		};
+		910781E42A9FBFC300401104 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				910781B82A9FBF1A00401104 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		910781E52A9FBFE200401104 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				910781BF2A9FBF1D00401104 /* LaunchScreen.storyboard */,
+				910781BA2A9FBF1A00401104 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		910781E62A9FBFF200401104 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				910781EA2A9FC05800401104 /* Item.swift */,
+				910781EC2A9FC06200401104 /* MyResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		910781E72A9FC01800401104 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				910781E82A9FC04300401104 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		910781EE2A9FC0B200401104 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				910781EF2A9FC0C400401104 /* NetworkServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910781EB2A9FC05800401104 /* Item.swift in Sources */,
 				910781B92A9FBF1A00401104 /* ViewController.swift in Sources */,
 				910781B52A9FBF1A00401104 /* AppDelegate.swift in Sources */,
+				910781E92A9FC04300401104 /* ViewModel.swift in Sources */,
+				910781F02A9FC0C400401104 /* NetworkServices.swift in Sources */,
+				910781ED2A9FC06200401104 /* MyResult.swift in Sources */,
 				910781B72A9FBF1A00401104 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
